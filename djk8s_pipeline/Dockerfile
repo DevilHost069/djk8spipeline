@@ -15,7 +15,7 @@ RUN pip install --upgrade pip
 COPY ./djk8s_pipeline/requirements.txt .
 RUN apk add --update --no-cache --virtual .tmp gcc libc-dev linux-headers
 RUN apk add --no-cache jpeg-dev zlib-dev
-RUN pip install -r ./djk8s_pipeline/requirements.txt
+RUN pip install -r requirements.txt
 RUN apk del .tmp
 
 # copy entrypoint.sh
