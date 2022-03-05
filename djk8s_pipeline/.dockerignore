@@ -1,0 +1,17 @@
+# Git
+.git
+.gitignore
+
+# Docker
+.docker
+
+# Python
+demoapp/__pycache__/
+demoapp/*/__pycache__/
+demoapp/*/*/__pycache__/
+demoapp/*/*/*/__pycache__/
+.env/
+.venv/
+venv/
+k8s/
+djangok8spipeline-kubeconfig.yaml

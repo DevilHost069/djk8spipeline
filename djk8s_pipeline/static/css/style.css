@@ -1,0 +1,82 @@
+/* unfocused borders*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.custom-notch .form-control{
+  background-color: #d1cfcf;
+  border: none;
+}
+.custom-notch .form-control:focus{
+  background-color: transparent;
+}
+.custom-notch .form-control~.form-notch .form-notch-leading {
+  border-top: 0.124rem solid #d1cfcf;
+  border-bottom: 0.124rem solid #d1cfcf;
+  border-left: 0.124rem solid #d1cfcf;
+} 
+.transparent-input{
+  color:rgb(255 255 255 / 80%)
+}
+.custom-notch .form-control~.form-notch .form-notch-trailing {
+  border-top: 0.124rem solid #d1cfcf;
+  border-right: 0.124rem solid #d1cfcf;
+  border-bottom: 0.124rem solid #d1cfcf;
+} 
+
+.custom-notch .form-control~.form-notch .form-notch-middle {
+  border-bottom: 0.124rem solid #d1cfcf;
+  border-top: 0.124rem solid #d1cfcf;
+} 
+.custom-notch .form-control:focus ~ .form-notch .form-notch-leading {
+  border-top: 0.125rem solid #c7af27;
+  border-bottom: 0.125rem solid #c7af27;
+  border-left: 0.125rem solid #c7af27;
+}
+.custom-notch .form-control:focus ~ .form-notch .form-notch-middle {
+  border-color: #c7af27;
+}
+.custom-notch .form-control:focus ~ .form-notch .form-notch-trailing {
+  border-top: 0.125rem solid #c7af27;
+  border-bottom: 0.125rem solid #c7af27;
+  border-right: 0.125rem solid #c7af27;
+}
+.custom-notch .form-control ~ .form-label {
+  color: rgba(37, 36, 36, 0.65) !important;
+}
+.custom-notch .form-control:focus ~ .form-label {
+  color: #c7af27 !important;
+}
+
+.autocomplete-input.focused ~ .form-notch .form-notch-leading {
+  border-top: 0.125rem solid #c7af27;
+  border-bottom: 0.125rem solid #c7af27;
+  border-left: 0.125rem solid #c7af27;
+  transition: all 0.2s linear;
+}
+.autocomplete-input.focused ~ .form-notch .form-notch-middle {
+  border-color: #c7af27;
+}
+.autocomplete-input.focused ~ .form-notch .form-notch-trailing {
+  border-color: #c7af27;
+}
+.autocomplete-input.focused ~ .autocomplete-label {
+  color: #c7af27;
+}
+
+.custom-notch .form-control:focus {
+
+  color: rgb(255 255 255 / 65%) !important;
+
+}
+.srcbtn {
+  color: rgb(255 255 255) !important;
+  background-color:  rgb(227 195 49);
+}
+.dropdown-toggle:after{
+  color:#d1cfcf
+}
+
+/* <i class="fas fa-shopping-cart fa-lg trailing" style="color: #e0c306"> */
+/* <i class="fas fa-map-marker-alt fa-lg trailing"style="color: #e0c306"></i> */

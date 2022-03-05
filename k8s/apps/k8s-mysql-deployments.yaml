@@ -1,0 +1,66 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: django-mysql-service
+  labels:
+    app: django
+spec:
+  ports:
+    - port: 3306
+  selector:
+    app: djk8s-mysql-deploy
+    tier: mysql
+  clusterIP: None
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pv-claim1
+  labels:
+    app: django
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: django-mysql
+  labels:
+    app: djk8s-mysql-deploy
+spec:
+  selector:
+    matchLabels:
+      app: djk8s-mysql-deploy
+      tier: mysql
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: djk8s-mysql-deploy
+        tier: mysql
+    spec:
+      containers:
+      - image: mysql:5.6
+        name: djk8s-mysql
+        envFrom:
+          - secretRef:
+              name: dj-k8s-dev-sec
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "600m"
+        ports:
+        - containerPort: 3306
+          name: mysql
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim1

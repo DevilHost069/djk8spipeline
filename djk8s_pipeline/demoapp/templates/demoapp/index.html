@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>OursMarket|Place</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <style>
+        /* Height for devices larger than 576px */
+      
+          #intro {
+            margin-top: -58.59px;
+            height: 45vh !important;
+           
+          }
+       
+  
+      
+      </style>
+  </head>
+  <body > 
+  
+
+<!-- Navbar -->
+<!-- Navbar -->
+
+  <!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg shadow-1-strong navbar-dark py-1 show-nav "
+ style="background-color: rgba(190, 186, 186, 0.5); z-index: 2000;">
+    <!-- Container wrapper -->
+    <div class="container-fluid px-5">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"   
+       
+      >
+        <i class="fas fa-bars"  id="barshow"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img
+            src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+            height="15"
+            alt="MDB Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+  
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <a href=" "><button type="button" class="btn btn-primary btn-sm me-3">
+          Publish products
+        </button></a>
+        <a class="text-reset me-3" href="#">
+          <i class="fas fa-shopping-cart" style="color: #eeecec"></i></i>
+        </a>
+  
+            <!--Messages-->
+            <div class="dropdown">
+              <a
+                class="text-reset me-3 dropdown-toggle hidden-arrow"
+                href="#"
+                role="button"
+                id="dropdownMenuLinktest"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+              <i class="fab fa-facebook-messenger" style="color: #eeecec"></i>
+              <span class="badge rounded-pill badge-notification bg-danger">1</span>
+              </a>
+             
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinktest">
+                <li><a class="dropdown-item py-1" href="#">Action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item py-1" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item py-1" href="#">Something else here</a></li>
+              </ul>
+            </div>
+             <!--End Messages-->
+               <!--Notifications-->
+        <div class="dropdown mx-2">
+          <a
+            class="text-reset me-3 dropdown-toggle hidden-arrow"
+            href="#"
+            role="button"
+            id="dropdownMenuLinkNoti"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+          <i class="fas fa-bell" style="color: #eeecec"></i>
+          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+          </a>
+         
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkNoti">
+            <li><a class="dropdown-item py-1" href="#">Action</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item py-1" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item py-1" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <!--Notifications End-->
+        <div class="dropdown align-items-center">
+          <a
+          class="text-reset me-3 dropdown-toggle"
+          href="#"
+          id="navbarDropdownMenuLinkProfile"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="{% static 'img/profiles/crush.jpg'% }"
+            class="rounded-circle "
+            height="35"
+            alt=""
+            loading="lazy"
+          />
+        </a>
+        <ul
+          class="dropdown-menu"
+          aria-labelledby="navbarDropdownMenuLinkProfile"
+        >
+          <li>
+            <a class="dropdown-item" href=" ">My profile</a>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li>
+            <a class="dropdown-item" href=" ">Logout</a>
+          </li>
+         </ul>
+         <span class="mb-0 px-0 text-end  fw-light text-muted" style="font-size: 13px"><strong>WELCOME</strong> </span>
+        </div>   
+        <a href=" "> <button type="button" class="btn btn-outline-primary mx-2" data-mdb-ripple-color="dark">
+          Login/Signup
+        </button></a>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+  <!-- Navbar -->
+
+  <!-- Background image -->
+  <div id="intro" class="bg-image  shadow-1-strong">
+    <div class="row gx-0">
+      <div class="col-6">
+        <img
+        src="{% static 'img/market89.PNG' %}"
+        class="img-fluid"    
+      />
+      </div>
+      <div class="col-6">
+        <img
+        src="{% static 'img/market69.PNG' %}"
+        class="img-fluid"  />
+      </div>
+    </div>
+
+        
+      <div class="mask d-flex align-items-center " style="background-color: rgba(54, 54, 54, 0.6);">
+        <div class="container">
+          <p class="display-6 font-weight-bold mb-3 text-center "><span style="color: rgb(10, 109, 238);">Welcome to </span ><span style="color: rgb(255, 211, 13);">Ours Marketplace</span>   </p>
+          <div class="card" style="background-color: rgba(10, 10, 10, 0.4);">
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <div id="basic" class="form-outline custom-notch">
+                    <i class="fas fa-shopping-cart fa-lg trailing" style="color: #585858"></i>
+                    <input type="text" id="form1" class="form-control " />
+                    <label class="form-label" for="form1">What are you looking for?</label>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <div id="location" class="form-outline custom-notch">
+                    <i class="fas fa-map-marker-alt fa-lg trailing"style="color: #585858"></i>
+                    <input type="text" id="form2" class="form-control " />
+                    <label class="form-label" for="form2">Location</label>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <input class="btn srcbtn btn-block " type="submit" value="Search" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+  </div>
+  <!-- Background image -->
+  <div class="container px-5">
+    <div class="row gx-5">
+      <div class="col">
+       <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+    </div>
+  </div>
+  
+   
+
+    <!-- MDB -->
+    <script type="text/javascript" src="{% static 'js/jquery.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/mdb.min.js'%}"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="{% static 'js/scripts.js'%}"></script>
+  </body>
+</html>
