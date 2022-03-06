@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: django-k8s-web-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: django-k8s-web-deployment
   ports:
@@ -76,7 +76,7 @@ spec:
     spec:
       containers:
       - name: django-k8s
-        image: devilhost069/djk8s-pipeline:v6
+        image: registry.digitalocean.com/django-k8s/djk8s_pipeline:v1.tagversion
         imagePullPolicy: Always
         envFrom:
           - secretRef:
